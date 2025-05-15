@@ -1,6 +1,6 @@
-Hallazgos y Conclusiones: Automatización de APIs con Karate y Serenity BDD
+Hallazgos y Conclusiones: Automatización de APIs con Karate
 
-Durante el proceso de explorar y trabajar con los frameworks Karate y Serenity BDD para la automatización de APIs, 
+Durante el proceso de explorar y trabajar con el framework Karate para la automatización de APIs,
 se identificaron varios aspectos clave que resaltan la efectividad y las ventajas de estas herramientas.
 
 En primer lugar, el framework Karate se destacó por su enfoque en la simplicidad y la facilidad de uso. 
@@ -9,21 +9,17 @@ incluso para aquellos que no son expertos en programación. Además, la capacida
 validar respuestas y realizar comparaciones se hizo evidente como una característica poderosa, permitiendo pruebas 
 exhaustivas y confiables.
 
-Serenity BDD, por otro lado, proporcionó una capa adicional de organización y generación de informes en la
-automatización de pruebas. Los reportes detallados y visualmente atractivos generados por Serenity permitieron una 
-mejor visión de los resultados de las pruebas y facilitaron la identificación de problemas y áreas de mejora.
-
-El proceso de aprendizaje de estos frameworks también reveló desafíos potenciales. A pesar de la facilidad de uso de 
+El proceso de aprendizaje de este framework también reveló desafíos potenciales. A pesar de la facilidad de uso de
 Karate, ciertos casos de prueba más complejos pueden requerir una comprensión más profunda de JSON y XML para 
 manipulaciones específicas. Además, la configuración inicial puede requerir tiempo, especialmente si se está integrando 
 con otras herramientas o sistemas.
 
-En última instancia, la combinación de Karate y Serenity BDD demostró ser una elección sólida para la automatización 
+En última instancia, la combinación de Karate demostró ser una elección sólida para la automatización
 de APIs. La facilidad de uso y la capacidad de generar informes visuales detallados brindan una base sólida para 
 implementar pruebas exhaustivas y escalables en un entorno de desarrollo ágil. Sin embargo, se recomienda una comprensión 
 sólida de los fundamentos de API y JSON/XML para aprovechar al máximo las capacidades de estas herramientas.
 
-En conclusión, la experiencia de trabajar con los frameworks Karate y Serenity BDD para automatizar APIs ha sido 
+En conclusión, la experiencia de trabajar con los frameworks Karate para automatizar APIs ha sido
 altamente positiva. Estas herramientas ofrecen un enfoque simplificado para construir pruebas confiables y generar 
 informes visuales, lo que es esencial en el panorama actual de desarrollo de software. La inversión de tiempo en la 
 comprensión y la configuración inicial se traduce en un valioso conjunto de herramientas para mejorar la calidad y la 
