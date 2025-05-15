@@ -1,5 +1,5 @@
-# PruebaE2EAPI ⭐
-This project was generated with Karate, Serenity bdd, Cucumber and Gherkin.
+# PruebaAPI ⭐
+This project was generated with Karate, Cucumber and Gherkin.
 
 1. Prerequisites: 📃
    -  Local Machine with OS Windows 10
