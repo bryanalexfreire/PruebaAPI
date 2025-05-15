@@ -1,0 +1,209 @@
+08:02:53.181 [Test worker] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+08:02:54.370 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"BryanAlexFreire123","password":"asfghgdssdg"}
+
+08:02:54.370 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 40
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"","password":"asfghgdssdg"}
+
+08:02:54.370 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 59
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"BryanAlexFreire123%","password":"asfghgdssdg"}
+
+08:02:54.370 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"BryanAlexFreire123","password":"asfgh1dssdg"}
+
+08:02:55.101 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 689
+1 < 200
+1 < content-type: application/json
+1 < vary: Accept-Encoding
+1 < x-cloud-trace-context: 79cfc8c0e17b97c16f5194bae09cc01e
+1 < date: Thu, 15 May 2025 13:02:54 GMT
+1 < server: Google Frontend
+1 < Transfer-Encoding: chunked
+{"errorMessage":"User does not exist."}
+
+
+08:02:55.131 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "errorMessage": "User does not exist."
+}
+ 
+08:02:55.147 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 47
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"BryanAlexFreire123","password":""}
+
+08:02:55.237 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 865
+1 < 200
+1 < content-type: application/json
+1 < vary: Accept-Encoding
+1 < x-cloud-trace-context: 3b68cbc2ccd41a457575f392ce4bcfbd
+1 < date: Thu, 15 May 2025 13:02:54 GMT
+1 < server: Google Frontend
+1 < Transfer-Encoding: chunked
+"Auth_token: QnJ5YW5BbGV4RnJlaXJlMTIzMTc0NzkxNA=="
+
+
+08:02:55.242 [pool-1-thread-1] INFO  com.intuit.karate - [print] "Auth_token: QnJ5YW5BbGV4RnJlaXJlMTIzMTc0NzkxNA=="
+ 
+08:02:55.253 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 842
+1 < 500
+1 < content-type: text/html
+1 < x-cloud-trace-context: 5d50e7d032f3ee5c73c7a91a77f820aa
+1 < date: Thu, 15 May 2025 13:02:54 GMT
+1 < server: Google Frontend
+1 < Content-Length: 290
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+
+
+08:02:55.253 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 29
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"","password":""}
+
+08:02:55.259 [pool-1-thread-4] INFO  com.intuit.karate - [print] <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+ 
+08:02:55.267 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 856
+1 < 200
+1 < content-type: application/json
+1 < vary: Accept-Encoding
+1 < x-cloud-trace-context: 3d8baaf136e03fd837891da01cc393a1
+1 < date: Thu, 15 May 2025 13:02:54 GMT
+1 < server: Google Frontend
+1 < Transfer-Encoding: chunked
+{"errorMessage":"Wrong password."}
+
+
+08:02:55.273 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "errorMessage": "Wrong password."
+}
+ 
+08:02:55.290 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 54
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"kellie.hand403478","password":"g0&xW6YS"}
+
+08:02:55.466 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 55
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"username":"loyd.haley171746","password":"1&QEpNq77j"}
+
+08:02:55.697 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 548
+1 < 200
+1 < content-type: application/json
+1 < vary: Accept-Encoding
+1 < x-cloud-trace-context: 501b2cc3936b6a4914983a066343e405
+1 < date: Thu, 15 May 2025 13:02:55 GMT
+1 < server: Google Frontend
+1 < Transfer-Encoding: chunked
+{"errorMessage":"Wrong password."}
+
+
+08:02:55.702 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "errorMessage": "Wrong password."
+}
+ 
+08:02:55.782 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 491
+1 < 200
+1 < content-type: application/json
+1 < vary: Accept-Encoding
+1 < x-cloud-trace-context: 94bbb034099d6bb1cb32aab6848f9a6b
+1 < date: Thu, 15 May 2025 13:02:55 GMT
+1 < server: Google Frontend
+1 < Transfer-Encoding: chunked
+{"errorMessage":"This user already exist."}
+
+
+08:02:55.786 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "errorMessage": "This user already exist."
+}
+ 
+08:02:55.787 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 533
+1 < 500
+1 < content-type: text/html
+1 < x-cloud-trace-context: d21ee55598c60fde3f83b4f2a1267d98
+1 < date: Thu, 15 May 2025 13:02:55 GMT
+1 < server: Google Frontend
+1 < Content-Length: 290
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+
+
+08:02:55.793 [pool-1-thread-1] INFO  com.intuit.karate - [print] <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+ 
+08:02:56.056 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 590
+1 < 200
+1 < content-type: application/json
+1 < x-cloud-trace-context: 2b86da6492e53f1f6fa52664435b89ac
+1 < date: Thu, 15 May 2025 13:02:55 GMT
+1 < server: Google Frontend
+1 < Content-Length: 3
+""
+
+
+08:02:56.059 [pool-1-thread-4] INFO  com.intuit.karate - [print] {
+  "username": "loyd.haley171746",
+  "password": "1&QEpNq77j"
+}
+ 
+08:02:56.062 [pool-1-thread-4] INFO  com.intuit.karate - [print] ""
+ 
+08:02:56.755 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:api/login/login.feature
+08:02:56.853 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:api/signUp/signUp.feature
