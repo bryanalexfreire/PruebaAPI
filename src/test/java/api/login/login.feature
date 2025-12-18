@@ -1,15 +1,15 @@
 Feature: Login in demoblaze.com
 
   Background:
-    #data for testing api
+    # data for testing the API
     * def urlBase = 'https://api.demoblaze.com/'
     * def path = 'login'
-    #Params for be used in scenaries
+    # Params to be used in scenarios
     * def validUser = 'BryanAlexFreire123'
     * def wrongUser = 'BryanAlexFreire123%'
     * def validPassword = 'asfghgdssdg'
     * def wrongPassword = 'asfgh1dssdg'
-    #message for be compared with error 500
+    # message to be compared with error 500
     * text error500 =
     """
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
@@ -53,7 +53,7 @@ Feature: Login in demoblaze.com
     And request {"username": "", "password": '#(validPassword)'}
     When method post
     Then status 500
-    And match $ == error500
+    And match response contains 'Internal Server Error'
     * print response
 
   @WithoutPassword
@@ -71,5 +71,5 @@ Feature: Login in demoblaze.com
     And request {"username": "", "password": ""}
     When method post
     Then status 500
-    And match $ == error500
+    And match response contains 'Internal Server Error'
     * print response

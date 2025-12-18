@@ -32,4 +32,4 @@ Feature: Signup an user in website
       And match response =={ "errorMessage": "This user already exist." }
       * print response
       Examples:
-      | read('classpath:../data.csv') |
+      | read('classpath:../data_signup.csv') |
