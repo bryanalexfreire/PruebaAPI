@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188cd32c-d82e-4669-b87e-d96c594b655b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme/Conclusions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conclusions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/login/LoginRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/login/login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/signUp/SignUpRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/signUp/signUp.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/signUp/signUp.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data_signup.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/karate.log" beforeDir="false" />
-    </list>
+    <list default="true" id="188cd32c-d82e-4669-b87e-d96c594b655b" name="Changes" comment="updated archetique" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,5 +182,9 @@
       <updated>1766019864091</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated archetique" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated archetique" />
   </component>
 </project>

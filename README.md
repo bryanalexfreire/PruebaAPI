@@ -34,5 +34,23 @@ This project was generated with Karate, Cucumber and Gherkin.
 3. Additional information: ➕
    - This repository contains 4 folders with evidence such as Postman collections, a conclusions file
 
+4. CI/CD with GitHub Actions: 🚀
+   - Workflow location: `.github/workflows/qa-ci.yml`
+   - Triggered on:
+     - Push to `main` and `develop`
+     - Pull Requests to `main` and `develop`
+     - Manual execution (`workflow_dispatch`)
+   - Pipeline actions:
+     - Checks out source code
+     - Uses JDK 21 (Temurin) with Gradle dependency cache
+     - Validates Gradle Wrapper integrity
+     - Executes `./gradlew --no-daemon clean test`
+     - Uploads QA artifacts (JUnit, Karate and Cucumber reports) for each run
+   - Artifacts generated:
+     - `build/test-results/test`
+     - `build/reports/tests/test`
+     - `build/karate-reports`
+     - `build/cucumber-html-reports`
+
 AUTHOR 📍
 @BryanFreire
