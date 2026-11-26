@@ -19,6 +19,9 @@ test {
     systemProperty "karate.env", System.properties.getProperty("karate.env")
     systemProperty "baseUrl", System.properties.getProperty("baseUrl")
     systemProperty "user", System.properties.getProperty("user")
+    if (System.getProperty("karate.options")) {
+        systemProperty "karate.options", System.getProperty("karate.options")
+    }
 
     outputs.upToDateWhen { false }
 }
