@@ -1,56 +1,47 @@
-# PruebaAPI ⭐
-This project was generated with Karate, Cucumber and Gherkin.
+# Karate API tests (Demoblaze)
 
-1. Prerequisites: 📃
-   - Local machine with Windows 101
-   - IDE: IntelliJ IDEA 2023.33 Community Edition (must be installed)
-   - Gradle 8.7 (must be installed and added to PATH)
-   - Java SE - JDK 21 (must be installed and added to PATH)
+API test suite for the public Demoblaze store (`https://api.demoblaze.com`), built with Karate, Cucumber and JUnit 5 on Gradle. It covers the login and sign-up endpoints with positive and negative scenarios.
 
-2. Instructions for running the tests: ✔️
-   - Open IntelliJ
-   - Open the project
-   - Select the project
-   - Wait for dependencies to download (progress is shown in the status bar)
+## What it demonstrates
 
-   **** RUN TESTS ****
+- API tests written as readable Gherkin with Karate, no glue code.
+- Positive and negative coverage: valid user, wrong user, wrong password, missing fields, empty body, new user and duplicated user.
+- Random test data generated with a Java helper (`DataGenerator`) so sign-up runs are repeatable.
+- Cucumber and Karate HTML reports generated on every run.
+- CI on GitHub Actions: Gradle wrapper validation, test run and report artifacts.
+- Postman collections of the same endpoints for manual exploration (`postman/`).
 
-   Evidence:
+## Project structure
 
-   - Open the file ManagmentTest.java
-   - Right-click on the editor
-   - Click on "Run ManagmentTest"
+```
+src/test/java/api/login/    login scenarios
+src/test/java/api/signUp/   sign-up scenarios
+src/test/java/helpers/      test data generator
+postman/                    Postman collections
+docs/conclusions.md         notes on the framework
+.github/workflows/qa-ci.yml CI pipeline
+```
 
-   **** VIEW REPORTS ****
+## Requirements
 
-   - In the project view open the "build" folder
-   - Open the "Karate-reports" folder
-   - Open "karate-summary.html" in a browser to view the Karate report
+- JDK 21
+- Gradle wrapper included (no install needed)
 
-   - In the project view open the "build" folder
-   - Open the "cucumber-html-reports" folder
-   - Open "overview-features.html" in a browser to view the Cucumber report
+## Run the tests
 
-3. Additional information: ➕
-   - This repository contains 4 folders with evidence such as Postman collections, a conclusions file
+```bash
+./gradlew clean test
+```
 
-4. CI/CD with GitHub Actions: 🚀
-   - Workflow location: `.github/workflows/qa-ci.yml`
-   - Triggered on:
-     - Push to `main` and `develop`
-     - Pull Requests to `main` and `develop`
-     - Manual execution (`workflow_dispatch`)
-   - Pipeline actions:
-     - Checks out source code
-     - Uses JDK 21 (Temurin) with Gradle dependency cache
-     - Validates Gradle Wrapper integrity
-     - Executes `./gradlew --no-daemon clean test`
-     - Uploads QA artifacts (JUnit, Karate and Cucumber reports) for each run
-   - Artifacts generated:
-     - `build/test-results/test`
-     - `build/reports/tests/test`
-     - `build/karate-reports`
-     - `build/cucumber-html-reports`
+Reports are written to:
 
-AUTHOR 📍
-@BryanFreire
+- `build/karate-reports/karate-summary.html`
+- `build/cucumber-html-reports/overview-features.html`
+
+## CI
+
+`.github/workflows/qa-ci.yml` runs on every push and pull request to `main` and `develop`, and manually. It runs `./gradlew clean test` on JDK 21 (Temurin) and uploads the JUnit, Karate and Cucumber reports as artifacts.
+
+## Author
+
+Bryan Freire, QA Automation Engineer. [LinkedIn](https://www.linkedin.com/in/bryanalexanderfreire/)
