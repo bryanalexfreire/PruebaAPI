@@ -23,6 +23,11 @@ test {
         systemProperty "karate.options", System.getProperty("karate.options")
     }
 
+    testLogging {
+        events "failed"
+        exceptionFormat "full"
+    }
+
     outputs.upToDateWhen { false }
 }
 
