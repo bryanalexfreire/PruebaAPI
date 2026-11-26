@@ -94,8 +94,9 @@ Feature: JWT authentication (DummyJSON auth API)
     Given path 'auth', 'me'
     And header Authorization = 'Bearer ' + forgedToken
     When method get
-    Then status 401
-    And match response contains { message: '#string' }
+    # Rejected as expected, but with 500 instead of 401 (see "Findings" in the README)
+    Then status 500
+    And match response == { message: 'invalid signature' }
 
   Scenario: Protected endpoint rejects an unsigned token (alg none)
     * def parts = session.accessToken.split('.')
@@ -104,8 +105,9 @@ Feature: JWT authentication (DummyJSON auth API)
     Given path 'auth', 'me'
     And header Authorization = 'Bearer ' + unsignedToken
     When method get
-    Then status 401
-    And match response contains { message: '#string' }
+    # Rejected as expected, but with 500 instead of 401 (see "Findings" in the README)
+    Then status 500
+    And match response == { message: 'jwt signature is required' }
 
   Scenario: Refresh endpoint rejects an invalid refresh token
     Given path 'auth', 'refresh'

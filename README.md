@@ -50,6 +50,10 @@ Reports are written to:
 - `build/karate-reports/karate-summary.html`
 - `build/cucumber-html-reports/overview-features.html`
 
+## Findings
+
+- DummyJSON rejects a token whose payload was changed (`invalid signature`) and an unsigned token with `alg: none` (`jwt signature is required`), so neither gives access to the profile. It answers both with HTTP 500 instead of 401. The tests assert the current status and message, so a fix on the API side will show up as a test change to review.
+
 ## CI
 
 `.github/workflows/qa-ci.yml` runs on every push and pull request to `main` and `develop`, and manually. It runs `./gradlew clean test` on JDK 21 (Temurin) and uploads the JUnit, Karate and Cucumber reports as artifacts.
