@@ -1,11 +1,16 @@
-# Karate API tests (Demoblaze)
+# Karate API tests
 
-API test suite for the public Demoblaze store (`https://api.demoblaze.com`), built with Karate, Cucumber and JUnit 5 on Gradle. It covers the login and sign-up endpoints with positive and negative scenarios.
+API test suite built with Karate, Cucumber and JUnit 5 on Gradle. It covers two public APIs:
+
+- **Demoblaze** (`https://api.demoblaze.com`): login and sign-up endpoints with positive and negative scenarios.
+- **DummyJSON auth** (`https://dummyjson.com/auth`): JWT authentication, from login to protected endpoints and token refresh.
 
 ## What it demonstrates
 
 - API tests written as readable Gherkin with Karate, no glue code.
 - Positive and negative coverage: valid user, wrong user, wrong password, missing fields, empty body, new user and duplicated user.
+- JWT authentication tests: token format, header and claims (user id, username, `exp - iat` matching the requested lifetime), Bearer access to a protected endpoint, refresh flow, and rejection of missing, malformed, tampered-payload and unsigned (`alg: none`) tokens.
+- Login done once per feature with `callonce` and reused across scenarios.
 - Random test data generated with a Java helper (`DataGenerator`) so sign-up runs are repeatable.
 - Cucumber and Karate HTML reports generated on every run.
 - CI on GitHub Actions: Gradle wrapper validation, test run and report artifacts.
@@ -16,6 +21,7 @@ API test suite for the public Demoblaze store (`https://api.demoblaze.com`), bui
 ```
 src/test/java/api/login/    login scenarios
 src/test/java/api/signUp/   sign-up scenarios
+src/test/java/api/auth/     JWT authentication scenarios (DummyJSON)
 src/test/java/helpers/      test data generator
 postman/                    Postman collections
 docs/conclusions.md         notes on the framework
@@ -33,10 +39,20 @@ docs/conclusions.md         notes on the framework
 ./gradlew clean test
 ```
 
+The JWT suite is tagged `@jwt`. To run only that feature:
+
+```bash
+./gradlew clean test -Dkarate.options="--tags @jwt"
+```
+
 Reports are written to:
 
 - `build/karate-reports/karate-summary.html`
 - `build/cucumber-html-reports/overview-features.html`
+
+## Findings
+
+- DummyJSON rejects a token whose payload was changed (`invalid signature`) and an unsigned token with `alg: none` (`jwt signature is required`), so neither gives access to the profile. It answers both with HTTP 500 instead of 401. The tests assert the current status and message, so a fix on the API side will show up as a test change to review.
 
 ## CI
 
